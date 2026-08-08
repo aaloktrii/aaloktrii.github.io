@@ -193,37 +193,6 @@ a:hover { text-decoration: underline; }
 .talk .meta { font-size: 0.9rem; color: var(--faint); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
 .talk .t { font-weight: 600; }
 
-/* ---------- Poster cards (with thumbnails) ---------- */
-.poster {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 22px;
-  align-items: start;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
-}
-.poster:last-child { border-bottom: none; }
-.poster .thumb {
-  display: block;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #fff;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.poster .thumb img { display: block; width: 100%; height: auto; }
-.poster .thumb:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-.poster .meta { font-size: 0.9rem; color: var(--faint); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-.poster .t { font-weight: 600; margin: 2px 0 4px; }
-
-@media (max-width: 560px) {
-  .poster { grid-template-columns: 1fr; gap: 12px; }
-  .poster .thumb { max-width: 320px; }
-}
-
 /* ---------- Footer ---------- */
 footer.site {
   border-top: 1px solid var(--line);
