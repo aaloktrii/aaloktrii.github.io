@@ -234,6 +234,30 @@ a:hover { text-decoration: underline; }
   line-height: 1.3;
 }
 
+/* ---------- CV-style entries (Outreach / Teaching) ---------- */
+.cvitem {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cvitem:last-child { border-bottom: none; }
+.cvitem .when {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--faint);
+  padding-top: 2px;
+}
+.cvitem .what strong { font-weight: 600; }
+.cvitem .what .course { color: var(--muted); font-size: 0.97rem; margin-top: 3px; }
+.cvitem .what .term { color: var(--faint); }
+@media (max-width: 560px) {
+  .cvitem { grid-template-columns: 1fr; gap: 3px; }
+}
+.cvlist { margin: 6px 0 4px; padding-left: 1.15em; }
+.cvlist li { margin: 7px 0; }
+
 /* ---------- Footer ---------- */
 footer.site {
   border-top: 1px solid var(--line);
