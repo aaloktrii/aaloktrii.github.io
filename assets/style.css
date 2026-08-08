@@ -1,0 +1,189 @@
+/* ---------------------------------------------------------------
+   Aalok Tiwari — personal site
+   Academic minimalist theme. Plain CSS, no build step.
+--------------------------------------------------------------- */
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #5c5c5c;
+  --faint: #8a8a8a;
+  --line: #e6e6e6;
+  --bg: #ffffff;
+  --accent: #7a1f2b;        /* deep maroon accent */
+  --accent-soft: #f5eced;
+  --maxw: 820px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Source Serif 4", Charter, Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Navigation ---------- */
+header.site {
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: saturate(180%) blur(6px);
+  z-index: 10;
+}
+nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+nav .brand {
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: var(--ink);
+}
+nav .links { display: flex; gap: 20px; flex-wrap: wrap; }
+nav .links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+nav .links a:hover { color: var(--accent); }
+nav .links a.active { color: var(--ink); border-bottom-color: var(--accent); }
+
+/* ---------- Layout blocks ---------- */
+main { padding: 44px 0 72px; }
+
+h1, h2, h3 { line-height: 1.25; font-weight: 600; }
+h1 { font-size: 2.1rem; margin: 0 0 6px; }
+h2 {
+  font-size: 1.4rem;
+  margin: 40px 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+h3 { font-size: 1.12rem; margin: 26px 0 4px; }
+
+p { margin: 0 0 16px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.tagline {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 1.05rem;
+  margin: 0 0 18px;
+}
+.small { font-size: 0.9rem; color: var(--faint); }
+.muted { color: var(--muted); }
+
+/* ---------- Hero (About) ---------- */
+.hero { display: flex; gap: 28px; align-items: flex-start; }
+.hero .avatar {
+  flex: 0 0 120px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.4rem; font-weight: 600;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.hero .avatar img { width: 100%; height: 100%; object-fit: cover; }
+.hero .intro { flex: 1 1 auto; min-width: 0; }
+
+.contact {
+  display: flex; flex-wrap: wrap; gap: 8px 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+.contact a { color: var(--muted); }
+.contact a:hover { color: var(--accent); }
+
+.btn {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.9rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.btn:hover { background: var(--accent); color: #fff; text-decoration: none; }
+
+/* ---------- Publications ---------- */
+.pub {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+}
+.pub:last-child { border-bottom: none; }
+.pub .year { color: var(--faint); font-variant-numeric: tabular-nums; font-size: 0.95rem; padding-top: 2px; }
+.pub .title { font-weight: 600; }
+.pub .authors { font-size: 0.95rem; color: var(--muted); }
+.pub .venue { font-size: 0.92rem; color: var(--muted); font-style: italic; }
+.pub .authors b { color: var(--ink); }
+.tag {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.72rem; letter-spacing: 0.4px; text-transform: uppercase;
+  background: var(--accent-soft); color: var(--accent);
+  padding: 1px 7px; border-radius: 3px; margin-left: 6px; vertical-align: middle;
+}
+.links-inline { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 0.88rem; margin-top: 3px; }
+.links-inline a { margin-right: 12px; }
+
+/* ---------- Research ---------- */
+.theme { margin-bottom: 26px; }
+.theme h3 { margin-top: 0; }
+
+/* ---------- Talks ---------- */
+.talk { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.talk:last-child { border-bottom: none; }
+.talk .meta { font-size: 0.9rem; color: var(--faint); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.talk .t { font-weight: 600; }
+
+/* ---------- Footer ---------- */
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 40px;
+  color: var(--faint);
+  font-size: 0.85rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .hero { flex-direction: column; align-items: center; text-align: center; }
+  .contact { justify-content: center; }
+  .pub { grid-template-columns: 1fr; gap: 4px; }
+  .pub .year { padding-top: 0; }
+  h1 { font-size: 1.8rem; }
+}
