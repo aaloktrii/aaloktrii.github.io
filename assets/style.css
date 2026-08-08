@@ -14,6 +14,9 @@
   --accent: #7a1f2b;        /* deep maroon accent */
   --accent-soft: #f5eced;
   --maxw: 820px;
+  --font-head: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Newsreader", Charter, Georgia, "Times New Roman", serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +49,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Source Serif 4", Charter, Georgia, "Times New Roman", serif;
+  font-family: var(--font-body);
   font-size: 18px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -78,8 +81,9 @@ nav {
   gap: 8px;
 }
 nav .brand {
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.15rem;
   letter-spacing: 0.2px;
   text-decoration: none;
   color: var(--ink);
@@ -99,8 +103,8 @@ nav .links a.active { color: var(--ink); border-bottom-color: var(--accent); }
 /* ---------- Layout blocks ---------- */
 main { padding: 44px 0 72px; }
 
-h1, h2, h3 { line-height: 1.25; font-weight: 600; }
-h1 { font-size: 2.1rem; margin: 0 0 6px; }
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.2; font-weight: 600; }
+h1 { font-size: 2.4rem; font-weight: 700; margin: 0 0 6px; }
 h2 {
   font-size: 1.4rem;
   margin: 40px 0 14px;
