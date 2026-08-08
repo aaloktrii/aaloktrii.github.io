@@ -9,14 +9,38 @@
   --faint: #8a8a8a;
   --line: #e6e6e6;
   --bg: #ffffff;
+  --card: #ffffff;
+  --header-bg: rgba(255,255,255,0.92);
   --accent: #7a1f2b;        /* deep maroon accent */
   --accent-soft: #f5eced;
   --maxw: 820px;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ececec;
+    --muted: #b0b0b0;
+    --faint: #888888;
+    --line: #333333;
+    --bg: #141414;
+    --card: #1c1c1c;
+    --header-bg: rgba(20,20,20,0.9);
+    --accent: #e08a96;      /* lighter maroon for contrast on dark */
+    --accent-soft: #33232630;
+  }
+}
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+
+::selection { background: var(--accent-soft); color: var(--accent); }
+
+a:focus-visible, .btn:focus-visible, nav .links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 
 body {
   margin: 0;
@@ -39,7 +63,7 @@ header.site {
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.92);
+  background: var(--header-bg);
   backdrop-filter: saturate(180%) blur(6px);
   z-index: 10;
 }
@@ -169,6 +193,37 @@ a:hover { text-decoration: underline; }
 .talk .meta { font-size: 0.9rem; color: var(--faint); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
 .talk .t { font-weight: 600; }
 
+/* ---------- Poster cards (with thumbnails) ---------- */
+.poster {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 22px;
+  align-items: start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.poster:last-child { border-bottom: none; }
+.poster .thumb {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.poster .thumb img { display: block; width: 100%; height: auto; }
+.poster .thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.poster .meta { font-size: 0.9rem; color: var(--faint); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.poster .t { font-weight: 600; margin: 2px 0 4px; }
+
+@media (max-width: 560px) {
+  .poster { grid-template-columns: 1fr; gap: 12px; }
+  .poster .thumb { max-width: 320px; }
+}
+
 /* ---------- Footer ---------- */
 footer.site {
   border-top: 1px solid var(--line);
@@ -186,4 +241,13 @@ footer.site {
   .pub { grid-template-columns: 1fr; gap: 4px; }
   .pub .year { padding-top: 0; }
   h1 { font-size: 1.8rem; }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  header.site, footer.site, .btn { display: none; }
+  body { font-size: 11pt; color: #000; background: #fff; }
+  main { padding: 0; }
+  a { color: #000; text-decoration: underline; }
+  .pub, .talk, .poster { break-inside: avoid; }
 }
