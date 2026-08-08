@@ -16,23 +16,9 @@
   --maxw: 820px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #ececec;
-    --muted: #b0b0b0;
-    --faint: #888888;
-    --line: #333333;
-    --bg: #141414;
-    --card: #1c1c1c;
-    --header-bg: rgba(20,20,20,0.9);
-    --accent: #e08a96;      /* lighter maroon for contrast on dark */
-    --accent-soft: #33232630;
-  }
-}
-
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { color-scheme: light; scroll-behavior: smooth; }
 
 ::selection { background: var(--accent-soft); color: var(--accent); }
 
