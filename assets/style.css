@@ -11,8 +11,8 @@
   --bg: #ffffff;
   --card: #ffffff;
   --header-bg: rgba(255,255,255,0.92);
-  --accent: #7a1f2b;        /* deep maroon accent */
-  --accent-soft: #f5eced;
+  --accent: #1b4f8a;        /* deep blue accent */
+  --accent-soft: #e9f1fa;
   --maxw: 820px;
   --font-head: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-body: "Newsreader", Charter, Georgia, "Times New Roman", serif;
@@ -28,8 +28,8 @@
     --bg: #141414;
     --card: #1c1c1c;
     --header-bg: rgba(20,20,20,0.9);
-    --accent: #e08a96;      /* lighter maroon for contrast on dark */
-    --accent-soft: #33232630;
+    --accent: #7ab3ea;      /* lighter blue for contrast on dark */
+    --accent-soft: rgba(122,179,234,0.14);
   }
 }
 
