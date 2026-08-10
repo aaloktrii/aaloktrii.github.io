@@ -19,23 +19,25 @@
   --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #ececec;
-    --muted: #b0b0b0;
-    --faint: #888888;
-    --line: #333333;
-    --bg: #141414;
-    --card: #1c1c1c;
-    --header-bg: rgba(20,20,20,0.9);
-    --accent: #7ab3ea;      /* lighter blue for contrast on dark */
-    --accent-soft: rgba(122,179,234,0.14);
-  }
+:root { color-scheme: light; }
+
+/* Dark theme is opt-in via the corner toggle (default is light). */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #ececec;
+  --muted: #b0b0b0;
+  --faint: #888888;
+  --line: #333333;
+  --bg: #141414;
+  --card: #1c1c1c;
+  --header-bg: rgba(20,20,20,0.9);
+  --accent: #7ab3ea;      /* lighter blue for contrast on dark */
+  --accent-soft: rgba(122,179,234,0.14);
 }
 
 * { box-sizing: border-box; }
 
-html { color-scheme: light dark; scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
 ::selection { background: var(--accent-soft); color: var(--accent); }
 
@@ -53,6 +55,7 @@ body {
   font-size: 18px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  transition: background-color .25s ease, color .25s ease;
 }
 
 .wrap {
@@ -63,19 +66,21 @@ body {
 
 /* ---------- Navigation ---------- */
 header.site {
+  border-top: 3px solid var(--accent);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   background: var(--header-bg);
   backdrop-filter: saturate(180%) blur(6px);
   z-index: 10;
+  transition: background-color .25s ease, border-color .25s ease;
 }
 nav {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 14px 24px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
@@ -88,7 +93,7 @@ nav .brand {
   text-decoration: none;
   color: var(--ink);
 }
-nav .links { display: flex; gap: 20px; flex-wrap: wrap; }
+nav .links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
 nav .links a {
   text-decoration: none;
   color: var(--muted);
@@ -96,9 +101,29 @@ nav .links a {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
 }
 nav .links a:hover { color: var(--accent); }
 nav .links a.active { color: var(--ink); border-bottom-color: var(--accent); }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 34px; height: 34px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+  transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle svg { width: 17px; height: 17px; }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 /* ---------- Layout blocks ---------- */
 main { padding: 44px 0 72px; }
@@ -106,10 +131,18 @@ main { padding: 44px 0 72px; }
 h1, h2, h3 { font-family: var(--font-head); line-height: 1.2; font-weight: 600; }
 h1 { font-size: 2.4rem; font-weight: 700; margin: 0 0 6px; }
 h2 {
+  position: relative;
   font-size: 1.4rem;
   margin: 40px 0 14px;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
+}
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -1px;
+  width: 42px; height: 2px;
+  background: var(--accent);
 }
 h3 { font-size: 1.12rem; margin: 26px 0 4px; }
 
@@ -138,6 +171,7 @@ a:hover { text-decoration: underline; }
   font-size: 2.4rem; font-weight: 600;
   border: 1px solid var(--line);
   overflow: hidden;
+  box-shadow: 0 6px 22px rgba(27,79,138,0.12);
 }
 .hero .avatar img { width: 100%; height: 100%; object-fit: cover; }
 .hero .intro { flex: 1 1 auto; min-width: 0; }
@@ -232,7 +266,9 @@ a:hover { text-decoration: underline; }
   border-radius: 20px;
   padding: 5px 12px;
   line-height: 1.3;
+  transition: border-color .18s ease, color .18s ease, transform .18s ease;
 }
+.chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
 
 /* ---------- CV-style entries (Outreach / Teaching) ---------- */
 .cvitem {
