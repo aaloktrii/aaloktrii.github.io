@@ -231,13 +231,18 @@ a:hover { text-decoration: underline; }
 .talk .meta { font-size: 0.9rem; color: var(--faint); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
 .talk .t { font-weight: 400; }
 .talk .kind {
+  display: inline-block;
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.4px;
-  color: var(--faint);
-  margin-right: 6px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 1px 8px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 .subhead {
   font-size: 1.15rem;
