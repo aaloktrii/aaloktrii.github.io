@@ -207,7 +207,7 @@ a:hover { text-decoration: underline; }
 }
 .pub:last-child { border-bottom: none; }
 .pub .year { color: var(--faint); font-variant-numeric: tabular-nums; font-size: 0.95rem; padding-top: 2px; }
-.pub .title { font-weight: 600; }
+.pub .title { font-weight: 400; }
 .pub .authors { font-size: 0.95rem; color: var(--muted); }
 .pub .venue { font-size: 0.92rem; color: var(--muted); font-style: italic; }
 .pub .authors b { color: var(--ink); }
@@ -229,7 +229,7 @@ a:hover { text-decoration: underline; }
 .talk { padding: 12px 0; border-bottom: 1px solid var(--line); }
 .talk:last-child { border-bottom: none; }
 .talk .meta { font-size: 0.9rem; color: var(--faint); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-.talk .t { font-weight: 600; }
+.talk .t { font-weight: 400; }
 .talk .kind {
   font-family: var(--font-ui);
   font-size: 0.72rem;
