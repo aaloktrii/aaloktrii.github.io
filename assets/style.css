@@ -15,6 +15,8 @@
   --accent-soft: #e9f1fa;
   --accent2: #0f766e;       /* teal accent — posters */
   --accent2-soft: #e3f4f0;
+  --accent3: #a16207;       /* amber accent — awards */
+  --accent3-soft: #faf1e0;
   --maxw: 820px;
   --font-head: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-body: "Newsreader", Charter, Georgia, "Times New Roman", serif;
@@ -37,6 +39,8 @@
   --accent-soft: rgba(122,179,234,0.14);
   --accent2: #6ecfbb;     /* lighter teal for contrast on dark */
   --accent2-soft: rgba(110,207,187,0.16);
+  --accent3: #e0b04f;     /* lighter amber for contrast on dark */
+  --accent3-soft: rgba(224,176,79,0.16);
 }
 
 * { box-sizing: border-box; }
@@ -248,7 +252,22 @@ a:hover { text-decoration: underline; }
 }
 .kind-talk { color: var(--accent); background: var(--accent-soft); }
 .kind-poster { color: var(--accent2); background: var(--accent2-soft); }
+.kind-award { color: var(--accent3); background: var(--accent3-soft); }
 .talk .t a { color: inherit; }
+.cvitem .kind { margin-right: 8px; }
+
+/* ---------- Section intro / group captions ---------- */
+.section-intro {
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin: 0 0 18px;
+}
+.group-desc {
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  color: var(--muted);
+  margin: -4px 0 10px;
+}
 .subhead {
   font-size: 1.15rem;
   margin: 22px 0 6px;
