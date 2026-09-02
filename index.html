@@ -8,10 +8,10 @@
   <meta name="description" content="Aalok Tiwari — experimental condensed matter physicist. Ph.D. candidate at Carnegie Mellon University working on 2D quantum materials, nano-ARPES, and XMCD-PEEM." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Newsreader:opsz,ital,wght@6..72,0,400;6..72,0,500;6..72,1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <meta name="theme-color" content="#1b4f8a" />
+  <meta name="theme-color" content="#0969da" />
   <meta name="author" content="Aalok Tiwari" />
   <link rel="canonical" href="https://aaloktrii.github.io/" />
   <meta property="og:type" content="website" />
@@ -22,23 +22,22 @@
   <meta name="twitter:card" content="summary" />
 </head>
 <body>
-  <header class="site">
-    <nav>
+  <div class="shell">
+    <aside class="sidebar">
       <a class="brand" href="index.html">Aalok Tiwari</a>
-      <div class="links">
+      <nav class="side-nav">
         <a href="index.html" class="active">About</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
         <a href="outreach.html">Outreach &amp; Teaching</a>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle light/dark">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle light/dark">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+    </aside>
+    <div class="content-col">
+    <main>
     <div class="wrap">
       <section class="hero">
         <div class="avatar">
@@ -112,13 +111,15 @@
       </p>
 
     </div>
-  </main>
+    </main>
 
-  <footer class="site">
-    <div class="wrap">
-      &copy; <span id="yr"></span> Aalok Tiwari &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.
+    <footer class="site">
+      <div class="wrap">
+        &copy; <span id="yr"></span> Aalok Tiwari &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.
+      </div>
+    </footer>
     </div>
-  </footer>
+  </div>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
   <script src="assets/theme.js"></script>
 </body>
