@@ -202,7 +202,7 @@ a:hover { text-decoration: underline; }
   padding: 14px 16px;
   margin-bottom: 12px;
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 48px 1fr;
   gap: 14px;
   transition: border-color .18s ease;
 }
