@@ -300,6 +300,7 @@ a:hover { text-decoration: underline; }
 }
 .cvlist { margin: 6px 0 4px; padding-left: 1.15em; }
 .cvlist li { margin: 7px 0; }
+.cvlist .cvlist { margin: 4px 0 0; font-size: 0.95em; color: var(--muted); }
 
 /* ---------- Footer ---------- */
 footer.site {
