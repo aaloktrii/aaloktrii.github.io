@@ -106,6 +106,7 @@ body {
 }
 .side-nav a:hover { color: var(--accent); }
 .side-nav a.active { color: var(--ink); font-weight: 600; border-left-color: var(--accent); }
+.side-nav a.sub-nav { font-size: 0.8rem; padding-left: 18px; color: var(--faint); }
 
 .theme-toggle {
   background: none;
