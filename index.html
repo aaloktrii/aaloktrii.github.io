@@ -26,7 +26,7 @@
     <div class="header-inner">
       <a class="brand" href="index.html">Aalok Tiwari</a>
       <nav class="top-nav">
-        <a href="index.html" class="active">Biography</a>
+        <a href="index.html" class="active">About</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
         <a href="outreach.html">Outreach &amp; Teaching</a>
@@ -37,65 +37,63 @@
       </button>
     </div>
   </header>
-  <main>
-    <div class="wrap">
-      <section class="hero">
-        <div class="avatar-wrap">
-          <div class="avatar">
-            <!-- To use a photo: drop assets/photo.jpg and uncomment the line below -->
-            <!-- <img src="assets/photo.jpg" alt="Aalok Tiwari" /> -->
-            AT
-          </div>
-          <span class="wip-label">work in progress</span>
-        </div>
-        <h1>Aalok Tiwari</h1>
-        <p class="tagline">Doctoral candidate in experimental condensed matter<br>
-          Department of Physics, Carnegie Mellon University</p>
-        <p>
-          I study quantum phases in low-dimensional materials using synchrotron spectro-microscopy (ARPES &amp; X-PEEM), van der Waals device fabrication, and physics-aware machine learning.
-        </p>
-        <div class="contact">
-          <a href="mailto:aalokt@andrew.cmu.edu">aalokt@andrew.cmu.edu</a>
+
+  <div class="banner-strip"></div>
+
+  <div class="page-layout">
+    <aside class="profile-col">
+      <div class="profile-avatar">
+        <!-- <img src="assets/photo.jpg" alt="Aalok Tiwari" /> -->
+        AT
+      </div>
+      <span class="wip-label">work in progress</span>
+      <div class="profile-text-block">
+        <div class="profile-name">Aalok Tiwari</div>
+        <div class="profile-title">Doctoral candidate, Physics</div>
+        <hr class="profile-rule">
+        <div class="profile-dept">Carnegie Mellon University</div>
+        <div class="profile-dept">Pittsburgh, PA</div>
+        <hr class="profile-rule">
+        <nav class="profile-links">
+          <a href="mailto:aalokt@andrew.cmu.edu">Email</a>
           <a href="https://scholar.google.com/citations?user=AxW-kcIAAAAJ">Google Scholar</a>
           <a href="https://orcid.org/0009-0003-6832-4220">ORCID</a>
           <a href="https://github.com/aaloktrii">GitHub</a>
           <a href="https://www.linkedin.com/in/aalok-tiwari/">LinkedIn</a>
-        </div>
+        </nav>
         <a class="btn" href="assets/Aalok_Tiwari_CV.pdf">Download CV (PDF)</a>
-      </section>
-
-      <h2 id="education">Education</h2>
-      <div class="cvgrid">
-        <div class="cvitem">
-          <div class="when">2023&ndash;present</div>
-          <div class="what">
-            <strong>Ph.D. Candidate, Physics</strong>
-            <div class="course"><a href="https://www.cmu.edu/physics/" style="color: inherit;">Carnegie Mellon University</a>, Pittsburgh, PA</div>
-            <div class="course">Advisor: <a href="https://scholars.cmu.edu/8049-jyoti-katoch" style="color: inherit;">Prof. Jyoti Katoch</a> &middot; Expected May 2028</div>
-          </div>
-        </div>
-        <div class="cvitem">
-          <div class="when">2018&ndash;2023</div>
-          <div class="what">
-            <strong>Integrated BS&ndash;MS, Physics</strong>
-            <div class="course"><a href="https://www.iiserkol.ac.in" style="color: inherit;">Indian Institute of Science Education and Research (IISER) Kolkata</a>, India</div>
-          </div>
-        </div>
       </div>
+    </aside>
 
-      <h2 id="biography">Biography</h2>
+    <main class="content-col">
+      <h1>About me</h1>
       <p>
         My current research integrates synchrotron-based ARPES &amp; X-PEEM, physics-aware modelling and nanofabrication to uncover unconventional electronic and magnetic phenomena arising from the confluence of electron correlation and spin&ndash;orbit coupling in low-symmetry topological devices.
       </p>
 
-    </div>
-  </main>
+      <h2 id="education">Education</h2>
+      <div class="cvitem">
+        <div class="when">2023&ndash;present</div>
+        <div class="what">
+          <strong>Ph.D. Candidate, Physics</strong>
+          <div class="course"><a href="https://www.cmu.edu/physics/" style="color: inherit;">Carnegie Mellon University</a>, Pittsburgh, PA</div>
+          <div class="course">Advisor: <a href="https://scholars.cmu.edu/8049-jyoti-katoch" style="color: inherit;">Prof. Jyoti Katoch</a> &middot; Expected May 2028</div>
+        </div>
+      </div>
+      <div class="cvitem">
+        <div class="when">2018&ndash;2023</div>
+        <div class="what">
+          <strong>Integrated BS&ndash;MS, Physics</strong>
+          <div class="course"><a href="https://www.iiserkol.ac.in" style="color: inherit;">Indian Institute of Science Education and Research (IISER) Kolkata</a>, India</div>
+        </div>
+      </div>
+    </main>
+  </div>
 
   <footer class="site">
-    <div class="wrap">
-      &copy; <span id="yr"></span> Aalok Tiwari &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.
-    </div>
+    <div>&copy; <span id="yr"></span> Aalok Tiwari &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.</div>
   </footer>
+
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
   <script src="assets/theme.js"></script>
 </body>

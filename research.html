@@ -26,7 +26,7 @@
     <div class="header-inner">
       <a class="brand" href="index.html">Aalok Tiwari</a>
       <nav class="top-nav">
-        <a href="index.html">Biography</a>
+        <a href="index.html">About</a>
         <a href="research.html" class="active">Research</a>
         <a href="publications.html">Publications</a>
         <a href="outreach.html">Outreach &amp; Teaching</a>
@@ -37,12 +37,37 @@
       </button>
     </div>
   </header>
-  <main>
-    <div class="wrap">
+
+  <div class="banner-strip"></div>
+
+  <div class="page-layout">
+    <aside class="profile-col">
+      <div class="profile-avatar">
+        <!-- <img src="assets/photo.jpg" alt="Aalok Tiwari" /> -->
+        AT
+      </div>
+      <span class="wip-label">work in progress</span>
+      <div class="profile-text-block">
+        <div class="profile-name">Aalok Tiwari</div>
+        <div class="profile-title">Doctoral candidate, Physics</div>
+        <hr class="profile-rule">
+        <div class="profile-dept">Carnegie Mellon University</div>
+        <div class="profile-dept">Pittsburgh, PA</div>
+        <hr class="profile-rule">
+        <nav class="profile-links">
+          <a href="mailto:aalokt@andrew.cmu.edu">Email</a>
+          <a href="https://scholar.google.com/citations?user=AxW-kcIAAAAJ">Google Scholar</a>
+          <a href="https://orcid.org/0009-0003-6832-4220">ORCID</a>
+          <a href="https://github.com/aaloktrii">GitHub</a>
+          <a href="https://www.linkedin.com/in/aalok-tiwari/">LinkedIn</a>
+        </nav>
+        <a class="btn" href="assets/Aalok_Tiwari_CV.pdf">Download CV (PDF)</a>
+      </div>
+    </aside>
+
+    <main class="content-col">
       <h1>Research</h1>
-      <p class="section-intro">
-        Ph.D. research at Carnegie Mellon University, and Master&rsquo;s research at IISER Kolkata.
-      </p>
+      <p class="section-intro">Ph.D. research at Carnegie Mellon University, and Master&rsquo;s research at IISER Kolkata.</p>
 
       <h2>Ph.D. Research</h2>
       <p class="section-intro">Katoch&ndash;Singh Lab, Carnegie Mellon University (2023&ndash;present)</p>
@@ -190,13 +215,11 @@
         <li>MCS Graduate Conference Travel Award to attend the APS Global Physics Summit (March 2026)</li>
         <li>Best Poster Award, Workshop on Scalable Analog Quantum Simulation Using Moir&eacute; Superlattices, organized by the Pittsburgh Quantum Institute (PQI) (December 2025)</li>
       </ul>
-    </div>
-  </main>
+    </main>
+  </div>
 
   <footer class="site">
-    <div class="wrap">
-      &copy; <span id="yr"></span> Aalok Tiwari &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.
-    </div>
+    <div>&copy; <span id="yr"></span> Aalok Tiwari &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.</div>
   </footer>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
   <script src="assets/theme.js"></script>
