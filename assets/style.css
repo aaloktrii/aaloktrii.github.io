@@ -127,26 +127,6 @@ body {
 :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
-/* ---------- Banner ---------- */
-.banner-strip {
-  height: 200px;
-  background: linear-gradient(135deg, #0d2b4e 0%, #1a4a7a 45%, #0f766e 100%);
-  position: relative;
-  overflow: hidden;
-}
-.banner-strip::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 60px,
-    rgba(255,255,255,0.03) 60px,
-    rgba(255,255,255,0.03) 61px
-  );
-}
-
 /* ---------- Page layout ---------- */
 .page-layout {
   max-width: calc(var(--profile-w) + var(--content-maxw) + 120px);
