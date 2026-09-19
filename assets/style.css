@@ -18,8 +18,8 @@
   --accent2-soft: rgba(15,118,110,0.08);
   --radius: 6px;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --font-head: var(--font-mono);
-  --font-body: var(--font-mono);
+  --font-head: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: Calibri, Candara, "Segoe UI", Optima, Arial, sans-serif;
   --profile-w: 210px;
   --content-maxw: 660px;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .brand {
-  font-family: var(--font-mono);
+  font-family: var(--font-head);
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.2px;
@@ -100,8 +100,8 @@ body {
 .top-nav a {
   text-decoration: none;
   color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
   transition: color .15s ease;
   white-space: nowrap;
 }
@@ -198,13 +198,14 @@ body {
 .profile-name {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ink);
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .profile-title {
-  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
   color: var(--muted);
   margin-bottom: 0;
   line-height: 1.4;
@@ -217,7 +218,8 @@ body {
 }
 
 .profile-dept {
-  font-size: 0.82rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.5;
 }
@@ -229,8 +231,8 @@ body {
   margin: 14px 0 16px;
 }
 .profile-links a {
-  font-family: var(--font-mono);
-  font-size: 0.80rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
   color: var(--muted);
   text-decoration: none;
 }
