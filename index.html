@@ -22,24 +22,22 @@
   <meta name="twitter:card" content="summary" />
 </head>
 <body>
-  <div class="shell">
-    <aside class="sidebar">
+  <header class="site-header">
+    <div class="header-inner">
       <a class="brand" href="index.html">Aalok Tiwari</a>
-      <nav class="side-nav">
+      <nav class="top-nav">
         <a href="index.html" class="active">Biography</a>
-        <a href="index.html#education" class="sub-nav">Education</a>
-        <a href="index.html#biography" class="sub-nav">Biography</a>
         <a href="research.html">Research</a>
-        <a href="publications.html">All Publications</a>
+        <a href="publications.html">Publications</a>
         <a href="outreach.html">Outreach &amp; Teaching</a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle light/dark">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       </button>
-    </aside>
-    <div class="content-col">
-    <main>
+    </div>
+  </header>
+  <main>
     <div class="wrap">
       <section class="hero">
         <div class="avatar-wrap">
@@ -50,27 +48,20 @@
           </div>
           <span class="wip-label">work in progress</span>
         </div>
-        <div class="intro">
-          <h1>Aalok Tiwari</h1>
-         <p class="tagline">Doctoral candidate in experimental condensed matter<br>
-          Department of Physics, Carnegie Mellon University
-          </p>
-          
-          
-          <p>
-            I study quantum phases in low-dimensional materials using synchrotron spectro-microscopy (ARPES &amp; X-PEEM), van der Waals device fabrication, and physics-aware machine learning.
-          </p>
-          <div class="contact">
-            <a href="mailto:aalokt@andrew.cmu.edu">aalokt@andrew.cmu.edu</a>
-            <a href="https://scholar.google.com/citations?user=AxW-kcIAAAAJ">Google Scholar</a>
-            <a href="https://orcid.org/0009-0003-6832-4220">ORCID</a>
-            <a href="https://github.com/aaloktrii">GitHub</a>
-            <a href="https://www.linkedin.com/in/aalok-tiwari/">LinkedIn</a>
-          </div>
-          <p style="margin-top:14px;">
-            <a class="btn" href="assets/Aalok_Tiwari_CV.pdf">Download CV (PDF)</a>
-          </p>
+        <h1>Aalok Tiwari</h1>
+        <p class="tagline">Doctoral candidate in experimental condensed matter<br>
+          Department of Physics, Carnegie Mellon University</p>
+        <p>
+          I study quantum phases in low-dimensional materials using synchrotron spectro-microscopy (ARPES &amp; X-PEEM), van der Waals device fabrication, and physics-aware machine learning.
+        </p>
+        <div class="contact">
+          <a href="mailto:aalokt@andrew.cmu.edu">aalokt@andrew.cmu.edu</a>
+          <a href="https://scholar.google.com/citations?user=AxW-kcIAAAAJ">Google Scholar</a>
+          <a href="https://orcid.org/0009-0003-6832-4220">ORCID</a>
+          <a href="https://github.com/aaloktrii">GitHub</a>
+          <a href="https://www.linkedin.com/in/aalok-tiwari/">LinkedIn</a>
         </div>
+        <a class="btn" href="assets/Aalok_Tiwari_CV.pdf">Download CV (PDF)</a>
       </section>
 
       <h2 id="education">Education</h2>
@@ -98,15 +89,13 @@
       </p>
 
     </div>
-    </main>
+  </main>
 
-    <footer class="site">
-      <div class="wrap">
-        &copy; <span id="yr"></span> Aalok Tiwari &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.
-      </div>
-    </footer>
+  <footer class="site">
+    <div class="wrap">
+      &copy; <span id="yr"></span> Aalok Tiwari &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.
     </div>
-  </div>
+  </footer>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
   <script src="assets/theme.js"></script>
 </body>
