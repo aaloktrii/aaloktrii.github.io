@@ -206,17 +206,20 @@ body {
 
 .profile-links {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
   margin: 14px 0 16px;
 }
 .profile-links a {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
   color: var(--muted);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  line-height: 1;
 }
-.profile-links a:hover { color: var(--accent); text-decoration: underline; }
+.profile-links a svg { width: 18px; height: 18px; }
+.profile-links a:hover { color: var(--accent); }
 
 /* ---------- Content column ---------- */
 .content-col {
