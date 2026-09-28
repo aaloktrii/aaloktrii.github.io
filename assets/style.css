@@ -162,11 +162,11 @@ body {
 }
 .profile-avatar img {
   position: absolute;
-  width: 280%;
+  width: 500%;
   height: auto;
   left: 50%;
   top: 0;
-  transform: translateX(-50%) translateY(-8%);
+  transform: translateX(-50%) translateY(-20%);
 }
 
 .wip-label {
