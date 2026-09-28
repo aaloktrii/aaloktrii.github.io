@@ -158,16 +158,8 @@ body {
   border: 1px solid var(--line);
   overflow: hidden;
   margin-bottom: 8px;
-  position: relative;
 }
-.profile-avatar img {
-  position: absolute;
-  width: 250%;
-  height: auto;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%) translateY(-38%);
-}
+.profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
 
 .wip-label {
   font-family: var(--font-mono);
